@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1641994155550
+    "lastModifiedOn": 1641994475672
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,8 +57,278 @@
     "readSQLDateColsAsDSSDates": true
   },
   "schema": {
-    "columns": [],
-    "userModified": false
+    "columns": [
+      {
+        "name": "Asset",
+        "type": "string",
+        "comment": "",
+        "originalType": "VARCHAR",
+        "maxLength": 10
+      },
+      {
+        "name": "R044_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R064_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R119_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R193_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R364_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R396_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R417_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R446_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R565_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R575_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R606_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R707_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R782_Quantity_sum",
+        "type": "int"
+      },
+      {
+        "name": "R783_Quantity_sum",
+        "type": "int"
+      }
+    ],
+    "userModified": false,
+    "metadata": {
+      "engineType": "SQL",
+      "pivotElementsModalities": [
+        {
+          "pivotElement": {
+            "keyColumns": [
+              "Reason"
+            ],
+            "valueLimit": "TOP_N",
+            "topnLimit": 20,
+            "minOccLimit": 0,
+            "explicitValues": [],
+            "globalCount": false,
+            "valueColumns": [
+              {
+                "column": "Quantity",
+                "type": "int",
+                "min": false,
+                "max": false,
+                "count": false,
+                "countDistinct": false,
+                "sum": true,
+                "concat": false,
+                "stddev": false,
+                "avg": false,
+                "sum2": false,
+                "first": false,
+                "last": false,
+                "concatDistinct": false,
+                "firstLastNotNull": false
+              }
+            ]
+          },
+          "pivotedModalities": [
+            {
+              "keyValues": [
+                "R044"
+              ],
+              "name": "R044",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R044_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R064"
+              ],
+              "name": "R064",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R064_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R119"
+              ],
+              "name": "R119",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R119_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R193"
+              ],
+              "name": "R193",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R193_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R364"
+              ],
+              "name": "R364",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R364_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R396"
+              ],
+              "name": "R396",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R396_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R417"
+              ],
+              "name": "R417",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R417_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R446"
+              ],
+              "name": "R446",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R446_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R565"
+              ],
+              "name": "R565",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R565_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R575"
+              ],
+              "name": "R575",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R575_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R606"
+              ],
+              "name": "R606",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R606_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R707"
+              ],
+              "name": "R707",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R707_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R782"
+              ],
+              "name": "R782",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R782_Quantity"
+                }
+              ]
+            },
+            {
+              "keyValues": [
+                "R783"
+              ],
+              "name": "R783",
+              "valueColumns": [
+                {
+                  "source": "Quantity",
+                  "pivoted": "R783_Quantity"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   "dkuProperties": [],
   "metrics": {
