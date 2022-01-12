@@ -32,13 +32,46 @@
   },
   "steps": [
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
         "expression": "Use_max - Use_min",
         "column": "nb_km"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "Use_max"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "Time_min",
+            "to": "Time_begin"
+          },
+          {
+            "from": "Use_min",
+            "to": "Initial_km"
+          }
+        ]
       },
       "alwaysShowComment": false
     }
@@ -69,9 +102,11 @@
   },
   "analysisColumnData": {},
   "columnWidthsByName": {
+    "Initial_km": 120,
     "Use_min": 100,
     "nb_km": 100,
     "Use_max": 100,
+    "Time_begin": 100,
     "Asset": 100,
     "Time_min": 100
   },
