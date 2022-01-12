@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1641993409579
+    "lastModifiedOn": 1641993489814
   },
   "creationTag": {
     "versionNumber": 0,
@@ -62,12 +62,19 @@
         "name": "Asset",
         "type": "string",
         "comment": "",
-        "originalType": "VARCHAR",
         "maxLength": 10
       },
       {
-        "name": "count",
-        "type": "bigint"
+        "name": "Time_min",
+        "type": "int"
+      },
+      {
+        "name": "Use_min",
+        "type": "double"
+      },
+      {
+        "name": "Use_max",
+        "type": "double"
       }
     ],
     "userModified": true
