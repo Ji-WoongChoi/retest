@@ -26,8 +26,39 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "R044_Quantity_sum"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "0"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [],
+        "appliesTo": "PATTERN",
+        "appliesToPattern": "(.*)_sum",
+        "value": "0"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -53,7 +84,23 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "R606_Quantity_sum": 143,
+    "R119_Quantity_sum": 143,
+    "R396_Quantity_sum": 143,
+    "R417_Quantity_sum": 143,
+    "R575_Quantity_sum": 143,
+    "R446_Quantity_sum": 143,
+    "R044_Quantity_sum": 143,
+    "R193_Quantity_sum": 143,
+    "R565_Quantity_sum": 143,
+    "R782_Quantity_sum": 143,
+    "R707_Quantity_sum": 143,
+    "R364_Quantity_sum": 143,
+    "R783_Quantity_sum": 143,
+    "R064_Quantity_sum": 143,
+    "Asset": 100
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
