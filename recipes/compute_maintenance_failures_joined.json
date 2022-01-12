@@ -19,6 +19,10 @@
         {
           "ref": "maintenance_part_consumption_by_Reason_prepared",
           "deps": []
+        },
+        {
+          "ref": "Usage_data_by_Asset_prepared",
+          "deps": []
         }
       ]
     }
@@ -35,11 +39,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1641996544085
+    "lastModifiedOn": 1641996714859
   },
   "creationTag": {
     "versionNumber": 0,
