@@ -3,14 +3,14 @@
   "centileSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
-  "defaultOutputIndex": 1,
   "preFilter": {
     "distinct": false,
     "enabled": false
   },
+  "defaultOutputIndex": -1,
   "seed": 1337,
   "randomColumns": [],
   "centileOrders": [],
@@ -18,22 +18,24 @@
   "randomSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "randomColumnsSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "computedColumns": [],
   "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
   "centileTDigest": false,
   "valueSplits": [
     {
       "outputIndex": 0,
-      "caseSensitive": false
+      "caseSensitive": false,
+      "value": ""
     }
   ],
   "rangeSplits": [
@@ -88,9 +90,87 @@
       "filter": {
         "uiData": {
           "mode": "\u0026\u0026",
-          "conditions": []
+          "conditions": [
+            {
+              "input": "proba_1",
+              "col": "proba_0",
+              "num": 0.75,
+              "operator": "\u003e\u003d [number]"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "Asset",
+                "type": "string",
+                "maxLength": 500
+              },
+              {
+                "name": "proba_0",
+                "type": "double"
+              },
+              {
+                "name": "proba_1",
+                "type": "double"
+              },
+              {
+                "name": "prediction",
+                "type": "string",
+                "maxLength": 500
+              }
+            ]
+          }
         },
         "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    },
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "proba_1",
+              "col": "proba_0",
+              "num": 0.75,
+              "operator": "\u003c  [number]"
+            },
+            {
+              "input": "proba_1",
+              "col": "proba_0",
+              "num": 0.5,
+              "operator": "\u003e\u003d [number]"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "Asset",
+                "type": "string",
+                "maxLength": 500
+              },
+              {
+                "name": "proba_0",
+                "type": "double"
+              },
+              {
+                "name": "proba_1",
+                "type": "double"
+              },
+              {
+                "name": "prediction",
+                "type": "string",
+                "maxLength": 500
+              }
+            ]
+          }
+        },
         "enabled": true
       },
       "outputIndex": 0

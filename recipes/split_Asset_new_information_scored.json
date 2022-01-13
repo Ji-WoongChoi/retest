@@ -25,21 +25,17 @@
         {
           "ref": "Asset_at_high_priority",
           "appendMode": false
-        },
-        {
-          "ref": "Asset_at_risks",
-          "appendMode": false
         }
       ]
     }
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642037597372
+    "lastModifiedOn": 1642037672001
   },
   "creationTag": {
     "versionNumber": 0,
