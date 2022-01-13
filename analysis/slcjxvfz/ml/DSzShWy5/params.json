@@ -22,7 +22,7 @@
     }
   },
   "weight": {
-    "weightMethod": "NO_WEIGHTING"
+    "weightMethod": "CLASS_WEIGHT"
   },
   "time": {
     "enabled": false,
@@ -64,7 +64,93 @@
     },
     "preprocessingFitSampleRatio": 1.0,
     "preprocessingFitSampleSeed": 1337,
-    "target_remapping": [],
+    "target_remapping": [
+      {
+        "sourceValue": "0",
+        "mappedValue": 0,
+        "sampleFreq": 1770
+      },
+      {
+        "sourceValue": "18",
+        "mappedValue": 1,
+        "sampleFreq": 21
+      },
+      {
+        "sourceValue": "8",
+        "mappedValue": 2,
+        "sampleFreq": 21
+      },
+      {
+        "sourceValue": "6",
+        "mappedValue": 3,
+        "sampleFreq": 14
+      },
+      {
+        "sourceValue": "7",
+        "mappedValue": 4,
+        "sampleFreq": 14
+      },
+      {
+        "sourceValue": "11",
+        "mappedValue": 5,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "12",
+        "mappedValue": 6,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "26",
+        "mappedValue": 7,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "16",
+        "mappedValue": 8,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "29",
+        "mappedValue": 9,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "19",
+        "mappedValue": 10,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "2",
+        "mappedValue": 11,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "4",
+        "mappedValue": 12,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "5",
+        "mappedValue": 13,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "62",
+        "mappedValue": 14,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "43",
+        "mappedValue": 15,
+        "sampleFreq": 7
+      },
+      {
+        "sourceValue": "1",
+        "mappedValue": 16,
+        "sampleFreq": 448
+      }
+    ],
     "per_feature": {
       "Initial_km": {
         "generate_derivative": false,
@@ -559,8 +645,7 @@
           "min": 1
         },
         "values": [
-          6,
-          14
+          8
         ],
         "range": {
           "min": 10,
@@ -576,7 +661,7 @@
           "min": 1
         },
         "values": [
-          4
+          1
         ],
         "range": {
           "min": 1,
@@ -619,7 +704,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "random_forest_classification": {
       "n_estimators": {
@@ -646,7 +731,8 @@
           "min": 1
         },
         "values": [
-          8
+          6,
+          14
         ],
         "range": {
           "min": 6,
@@ -705,7 +791,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "extra_trees": {
       "n_estimators": {
@@ -1018,7 +1104,7 @@
           }
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "decision_tree_classification": {
       "max_depth": {
@@ -1128,7 +1214,7 @@
           }
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "ridge_regression": {
       "alphaMode": "MANUAL",
@@ -1150,7 +1236,7 @@
           "scaling": "LOGARITHMIC"
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "lasso_regression": {
       "alphaMode": "AUTO_CV",
@@ -1346,7 +1432,7 @@
         }
       },
       "n_jobs": 2,
-      "enabled": false
+      "enabled": true
     },
     "neural_network": {
       "layer_sizes": {
@@ -1897,8 +1983,8 @@
           0.2
         ],
         "range": {
-          "min": 0.01,
-          "max": 0.1,
+          "min": 0.1,
+          "max": 0.5,
           "nbValues": 3,
           "scaling": "LINEAR"
         }
@@ -1914,7 +2000,7 @@
         ],
         "range": {
           "min": 0.0,
-          "max": 0.4,
+          "max": 1.0,
           "nbValues": 3,
           "scaling": "LINEAR"
         }
@@ -2077,7 +2163,7 @@
       "seed": 1337,
       "enable_early_stopping": true,
       "early_stopping_rounds": 4,
-      "enabled": true
+      "enabled": false
     },
     "deep_learning_sparkling": {
       "enabled": false,
@@ -2428,16 +2514,17 @@
       "randomized": true,
       "seed": 1337,
       "nIter": 0,
-      "nIterRandom": 3,
+      "nIterRandom": 5,
       "timeout": 0,
       "nJobs": 4,
       "distributed": false,
       "nContainers": 4
     },
     "metrics": {
-      "evaluationMetric": "R2",
+      "evaluationMetric": "ROC_AUC",
       "customEvaluationMetricGIB": true,
       "customEvaluationMetricNeedsProba": false,
+      "thresholdOptimizationMetric": "F1",
       "costMatrixWeights": {
         "tpGain": 1.0,
         "tnGain": 0.0,
@@ -2452,7 +2539,7 @@
   "assertionsParams": {
     "assertions": []
   },
-  "predictionType": "REGRESSION",
+  "predictionType": "BINARY_CLASSIFICATION",
   "targetVariable": "failure_bin",
   "splitParams": {
     "ttPolicy": "SPLIT_SINGLE_DATASET",
