@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642037316070
+    "lastModifiedOn": 1642037371994
   },
   "creationTag": {
     "versionNumber": 0,
@@ -62,14 +62,12 @@
         "name": "Asset",
         "type": "string",
         "comment": "",
-        "originalType": "TEXT",
         "maxLength": 500
       },
       {
         "name": "failure_bin",
         "type": "int",
-        "comment": "",
-        "originalType": "INT"
+        "comment": ""
       },
       {
         "name": "R044_Quantity_sum",
@@ -126,6 +124,18 @@
       {
         "name": "R783_Quantity_sum",
         "type": "bigint"
+      },
+      {
+        "name": "Time_begin",
+        "type": "bigint"
+      },
+      {
+        "name": "Initial_km",
+        "type": "double"
+      },
+      {
+        "name": "nb_km",
+        "type": "double"
       }
     ],
     "userModified": true
