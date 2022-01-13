@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642037576566
+    "lastModifiedOn": 1642037671846
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,7 +57,26 @@
     "readSQLDateColsAsDSSDates": true
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "Asset",
+        "type": "string",
+        "maxLength": 500
+      },
+      {
+        "name": "proba_0",
+        "type": "double"
+      },
+      {
+        "name": "proba_1",
+        "type": "double"
+      },
+      {
+        "name": "prediction",
+        "type": "string",
+        "maxLength": 500
+      }
+    ],
     "userModified": true
   },
   "dkuProperties": [],
