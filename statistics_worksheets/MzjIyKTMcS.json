@@ -29,16 +29,343 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "highlightFilter": {
+      "type": "anum",
+      "column": "prediction",
+      "values": [
+        "1"
+      ],
+      "name": "prediction: 1"
+    },
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "Asset",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "proba_0",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "proba_1",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "prediction",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Asset",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "highlightFilter": {
+                  "type": "anum",
+                  "column": "prediction",
+                  "values": [
+                    "1"
+                  ],
+                  "name": "prediction: 1"
+                },
+                "column": {
+                  "name": "Asset",
+                  "type": "CATEGORICAL"
+                },
+                "id": "TbbJm2M"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Asset",
+                  "type": "CATEGORICAL"
+                },
+                "id": "G1IR9eD"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Asset",
+                  "type": "CATEGORICAL"
+                },
+                "id": "DFAQ9pT"
+              }
+            ],
+            "id": "nxC0vY3"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "proba_0",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "highlightFilter": {
+                  "type": "anum",
+                  "column": "prediction",
+                  "values": [
+                    "1"
+                  ],
+                  "name": "prediction: 1"
+                },
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "proba_0",
+                  "type": "CONTINUOUS"
+                },
+                "id": "WowJxb9"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "proba_0",
+                  "type": "CONTINUOUS"
+                },
+                "id": "diuydWa"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "proba_0",
+                  "type": "CONTINUOUS"
+                },
+                "id": "80EwTdp"
+              }
+            ],
+            "id": "Df07S20"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "proba_1",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "highlightFilter": {
+                  "type": "anum",
+                  "column": "prediction",
+                  "values": [
+                    "1"
+                  ],
+                  "name": "prediction: 1"
+                },
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "proba_1",
+                  "type": "CONTINUOUS"
+                },
+                "id": "spiyppQ"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "proba_1",
+                  "type": "CONTINUOUS"
+                },
+                "id": "EMazZLB"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "proba_1",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Q3Bn2ii"
+              }
+            ],
+            "id": "m9HAD0c"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "prediction",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "highlightFilter": {
+                  "type": "anum",
+                  "column": "prediction",
+                  "values": [
+                    "1"
+                  ],
+                  "name": "prediction: 1"
+                },
+                "column": {
+                  "name": "prediction",
+                  "type": "CATEGORICAL"
+                },
+                "id": "pJHpwZm"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "prediction",
+                  "type": "CATEGORICAL"
+                },
+                "id": "izxHcxK"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "prediction",
+                  "type": "CATEGORICAL"
+                },
+                "id": "2NFEzqF"
+              }
+            ],
+            "id": "uatJ9z5"
+          }
+        ],
+        "id": "TTpSbAd"
+      }
+    ],
     "id": "D6Pk3kh"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1643075267577
+    "lastModifiedOn": 1643075311604
   },
   "creationTag": {
     "versionNumber": 0,
